@@ -4,31 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>디바이스정보얻기</title>
+    <title>달력</title>
+    <style>
+    body {
+    font-family: 'NanumGothic', 'serif';
+    }
+    caption h1 {
+        margin: 0;
+        padding: 0;
+    }
+    table, th, td {
+        border: 1px solid #999;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 5px;
+      width: 100px;
+      font-weight: bold;
+    }
+    th {
+        background: lightgray;
+        vertical-align: middle;
+    }
+    td {
+        height: 80px;
+        text-align: left;
+        vertical-align: top;
+    }
+    #gray{
+        color: lightgray;
+    }
+    #red{
+        color: red;
+    }
+</style>
 </head>
 <body>
-    <script>
-        let info = navigator.userAgent.toLocaleLowerCase();
-        console.log(info);
-        let osTxt = null; // 이미지 변수 초기화
-        // 문자를 비교해서 운영체제 확인
-        if(info.indexOf('windows')>=0) {
-            osTxt = "윈도우";
-        } else if (info.indexOf('macintosh')>= 0){
-            osTxt = "맥";
-        }else if (info.indexOf('iphone')>= 0){
-            osTxt = "아이폰";
-        }else if (info.indexOf('android')>= 0){
-            osTxt = "안드로이드";
-        }else{
-            osTxt = "불명";
-        }
-
-        document.write(`<br>운영체제: ${osTxt}`);
-        // 모니터 정보
-        let sc_w = screen.width;
-        let sc_h = screen.height;
-        document.write(`<br>모니터 해상도: 너비=${sc_w}px, 높이=${sc_h}px`);
-    </script>
+<table>
+    <caption><h1>2015.05</h1></caption>
+  <tr id="day">
+    <th>일</th>
+    <th>월</th>
+    <th>화</th>
+    <th>수</th>
+    <th>목</th>
+    <th>금</th>
+    <th>토</th>
+  </tr>
+  <tr>
+    <td id="gray">26</td>
+    <td id="gray">27</td>
+    <td id="gray">28</td>
+    <td id="gray">29</td>
+    <td id="gray">30</td>
+    <td>1</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td id="red">3</td>
+    <td>4</td>
+    <td id="red">5<br>어린이날
+    </td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td id="red">10</td>
+    <td>11</td>
+    <td>12</td>
+    <td>13</td>
+    <td>14</td>
+    <td>15</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td id="red">17</td>
+    <td>18</td>
+    <td>19</td>
+    <td>20</td>
+    <td>21</td>
+    <td>22</td>
+    <td>23</td>
+  </tr>
+  <tr>
+    <td id="red">24</td>
+    <td id="red">25<br>석가탄신일</td>
+    <td>26</td>
+    <td>27</td>
+    <td>28</td>
+    <td>29</td>
+    <td>30</td>
+  </tr>
+  <tr>
+    <td id="red">31</td>
+    <td id="gray">1</td>
+    <td id="gray">2</td>
+    <td id="gray">3</td>
+    <td id="gray">4</td>
+    <td id="gray">5</td>
+    <td id="gray">6</td>
+  </tr>
+</table>
 </body>
 </html>
